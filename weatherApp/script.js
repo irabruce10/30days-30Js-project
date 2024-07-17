@@ -1,19 +1,22 @@
 const key = "5ea6d2d405d85b936245b654206c31fb";
 
-const url =
-  "https://api.openweathermap.org/data/2.5/weather?units=metric&q=linz";
+const url = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-async function getWeatherData() {
-  const response = await fetch(url + `&appid=${key}`);
-  const data = await response.json();
+let searchBox = document.querySelector(".search input");
+let searchBtn = document.querySelector(".search button");
+
+async function getWeather(city) {
+  const response = await fetch(url + city + `&appid=${key}`);
+  let data = await response.json();
   console.log(data);
 
-  //   if (response.ok) {
-  //     return data;
-  //     console.log(data);
-  //   } else {
-  //     throw new Error(`HTTP error! status: ${response.status}`);
-  //   }
+  document.querySelector(".city").innerHTML = data.name;
+  document.querySelector(".temperature").innerHTML =
+    Math.round(data.main.temp) + "°C";
+  document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+  document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 }
 
-getWeatherData();
+searchBtn.addEventListener("click", () => {
+  getWeather(searchBox.value);
+});
