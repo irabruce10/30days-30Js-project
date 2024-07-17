@@ -61,6 +61,7 @@ body {
 
 .weather-icon {
   width: 200px;
+  margin-top: 30px;
 }
 
 .city {
@@ -87,4 +88,16 @@ body {
 
 .col img {
   width: 50px;
+}
+
+.message {
+  text-align: center;
+  color: #ebfffc;
+  font-size: 40px;
+  margin-top: 30px;
+  display: none;
+}
+
+.weather {
+  display: none;
 }
