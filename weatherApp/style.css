@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: auto;
+}
+
+body {
+  background-color: rgb(33, 32, 32);
+}
+
+.card {
+  width: 90%;
+  max-width: 470px;
+  color: "#FFFFFF";
+  margin: 100px auto 0;
+  border-radius: 20px;
+  padding: 40px 35px;
+
+  background: linear-gradient(135deg, #00feba, #5b648a);
+}
