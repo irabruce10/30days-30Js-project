@@ -10,5 +10,6 @@ form.addEventListener("submit", (event) => {
     let li = document.createElement("li");
     li.innerHTML = element.value;
     document.querySelector(".todoList").appendChild(li);
+    element.value = "";
   }
 });

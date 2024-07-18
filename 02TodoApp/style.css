@@ -1,20 +1,22 @@
 * {
   padding: 0;
-  margin: auto;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100%;
+  padding: 10px;
 }
 
 .todoCard {
-  width: 90%;
-  max-width: 350px;
-  margin: 80px auto;
+  width: 100%;
+  max-width: 540px;
+  margin: 80px auto 20px;
   background: linear-gradient(rgb(138, 123, 123), rgb(76, 76, 161));
-  height: 100%;
-  padding: 30px 40px;
+  padding: 40px 30px 70px;
   border-radius: 10px;
 }
 
@@ -30,7 +32,6 @@ body {
   border: none;
   border-radius: 5px;
   margin-bottom: 15px;
-
   font-weight: bolder;
 }
 
@@ -45,3 +46,27 @@ button {
   font-weight: bolder;
   background: linear-gradient(rgb(138, 123, 123), rgb(76, 76, 161));
 }
+
+.todoList li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 2px 50px;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.todoList li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  top: 8px;
+  left: 10px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(image/icons8-unchecked-checkbox-50.png);
+}
+
+
