@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: auto;
+}
+
+body {
+  background-color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.todoCard {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  background: linear-gradient(red, blue);
+  height: 100%;
+  padding: 30px 50px;
+}

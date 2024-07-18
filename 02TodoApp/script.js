@@ -3,10 +3,9 @@ const form = document.getElementById("todoForm");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const element = document.querySelector(".todoInput");
-  console.log(element);
 
-  if (element.value === " ") {
-    alert("Please add something");
+  if (element.value === "") {
+    console.log("Please select");
   } else {
     let li = document.createElement("li");
     li.innerHTML = element.value;
