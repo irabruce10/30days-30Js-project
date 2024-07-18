@@ -5,5 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="todoCard">
+      <h2>To-Do List</h2>
+
+      <form id="todoForm">
+        <input
+          type="text"
+          class="todoInput"
+          placeholder="Add a new task"
+          required />
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="todoList">
+        <!-- Todo List Items will be dynamically added here -->
+
+        <ul>
+          <li>Todo</li>
+          <li>goo</li>
+          <li>Hello</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
