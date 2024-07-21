@@ -11,3 +11,9 @@ btn.addEventListener("click", () => {
 
   containerNote.appendChild(inputNote).appendChild(img);
 });
+
+containerNote.addEventListener("click", function (e) {
+  if (e.target.tagName === "IMG") {
+    e.target.parentNode.remove();
+  }
+});
