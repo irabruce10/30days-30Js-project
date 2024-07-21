@@ -5,7 +5,7 @@ form.addEventListener("submit", (event) => {
   const element = document.querySelector(".todoInput");
 
   if (element.value === "") {
-    console.log("Please select");
+    console.log("Please add New Task  ");
   } else {
     let li = document.createElement("li");
     li.innerHTML = element.value;
