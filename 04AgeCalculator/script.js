@@ -1,20 +1,12 @@
 let btn = document.querySelector(".btn");
 
 let iptValue = document.getElementById("date");
+iptValue.max = new Date().toISOString().split("T")[0];
 
-// btn.addEventListener("click", () => {
-//   let bday = new Date(iptValue.value);
-
-//   let d1 = bday.getDate();
-
-//   console.log(d1);
-//   let today = new Date();
-//   console.log(bday);
-// });
+let para = document.querySelector(".para");
 
 function calcAge() {
   let bday = new Date(iptValue.value);
-  console.log(bday);
 
   let d1 = bday.getDate();
   let m1 = bday.getMonth() + 1;
@@ -28,9 +20,29 @@ function calcAge() {
 
   let y3 = y2 - y1;
 
-  console.log(y3);
+  if (m2 >= m1) {
+    m3 = m2 - m1;
+  } else {
+    y3--;
+    m3 = 12 + m2 - m1;
+  }
 
-  console.log(today);
+  if (d2 >= d1) {
+    d3 = d2 - d1;
+  } else {
+    m3--;
+    d3 = getMonthDay(y1, m1) + d2 - d1;
+  }
+  if (m3 < 0) {
+    m3 = 11;
+    y3--;
+  }
+
+  para.innerHTML = `you have ${y3} years, ${m3} months,${d3} days`;
+}
+
+function getMonthDay(year, month) {
+  return new Date(year, month, 0).getDate();
 }
 
 btn.addEventListener("click", calcAge);
