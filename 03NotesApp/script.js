@@ -17,3 +17,12 @@ containerNote.addEventListener("click", function (e) {
     e.target.parentNode.remove();
   }
 });
+
+let a = prompt("enter your number");
+function run(a) {
+  let res = a * 60 * 24;
+  console.log(`The number of minutes in ${a} days is ${res}.`);
+  return res;
+}
+
+run(a);
