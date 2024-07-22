@@ -5,15 +5,50 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.card input::-webkit-calendar-picker-indicator {
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.input-box {
+  margin: 40px 0;
+  padding: 35px;
+  border-radius: 10px;
+  background: rgba(13, 135, 70, 0.3);
+  display: flex;
+  align-items: center;
+}
+.input-box input {
+  position: relative;
+  flex: 1;
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  padding: 14px 20px;
+  margin-right: 20px;
+}
+
+.input-box button {
+  background: #101010;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 15px 30px;
+  outline: 0;
+  border: 0;
+}
+.input-box input::-webkit-calendar-picker-indicator {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   width: auto;
   height: auto;
-  cursor: pointer;
+  position: absolute;
   background-position: calc(100% - 10px);
   background-size: 30px;
-  position: absolute;
+  cursor: pointer;
 }
