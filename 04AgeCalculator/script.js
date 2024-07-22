@@ -38,7 +38,7 @@ function calcAge() {
     y3--;
   }
 
-  para.innerHTML = `you have ${y3} years, ${m3} months,${d3} days`;
+  para.innerHTML = `You are <span>${y3}</span>   years, <span>${m3}</span> months,and <span>${d3}</span> days old`;
 }
 
 function getMonthDay(year, month) {

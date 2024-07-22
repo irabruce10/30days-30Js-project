@@ -52,3 +52,10 @@
   background-size: 30px;
   cursor: pointer;
 }
+
+.para {
+  font-size: 20px;
+}
+.para span {
+  color: rgba(13, 135, 70, 0.3);
+}
