@@ -1,14 +1,14 @@
 const formSearch = document.querySelector("form");
 const searchInput = document.querySelector("#searchInput");
 const searchContainer = document.querySelector(".search-container");
-const showMore = document.querySelector(".showmore");
+const showMore = document.querySelector("#showmore");
 
 let page = 1;
 
 const accessKey = "RTYCsdH8gWV_XDZt5WfUso4OAkuXzbNExgRaRcrosbo";
 
 async function search() {
-  let url = `https://api.unsplash.com/search/photos?page=${page}&query=${searchInput.value}&client_id=${accessKey}`;
+  let url = `https://api.unsplash.com/search/photos?page=${page}&query=${searchInput.value}&client_id=${accessKey}&per_page=12`;
   let response = await fetch(url);
   let data = await response.json();
 
@@ -22,9 +22,10 @@ async function search() {
     imageLink.target = "_blank";
     imageLink.appendChild(img)
     searchContainer.appendChild(imageLink);
+    
   });
 
-  console.log(data);
+  showMore.style.display='block'
 }
 
 formSearch.addEventListener("submit", (e) => {
