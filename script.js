@@ -14,24 +14,32 @@ async function search() {
 
   const results = data.results;
 
+  if (page === 1) {
+    searchContainer.innerHTML = "";
+    showMore.style.display = "none";
+  }
+
   results.map((el) => {
     let img = document.createElement("img");
     img.src = el.urls.small;
     let imageLink = document.createElement("a");
     imageLink.href = el.links.html;
     imageLink.target = "_blank";
-    imageLink.appendChild(img)
+    imageLink.appendChild(img);
     searchContainer.appendChild(imageLink);
-    
   });
 
-  showMore.style.display='block'
+  showMore.style.display = "block";
 }
 
 formSearch.addEventListener("submit", (e) => {
   e.preventDefault();
-  page=1
+  page = 1;
   search();
 });
 
-console.log(searchInput);
+showMore.addEventListener("click", () => {
+  page++;
+
+  search();
+});
